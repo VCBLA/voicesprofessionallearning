@@ -99,11 +99,11 @@
 
   /* ---------- Travel-from ---------- */
   .travel-row{align-items:center;}
-  .travel-field input[type="text"]{
+  .field input[type="text"]{
     font-family:inherit;font-size:13.5px;border:1px solid var(--line);border-radius:10px;
     padding:10px 12px;background:var(--card);color:var(--ink);min-width:260px;
   }
-  .travel-field input[type="text"]:focus{outline:2px solid var(--focus);}
+  .field input[type="text"]:focus{outline:2px solid var(--focus);}
   .travel-status{font-size:12.5px;color:var(--ink-soft);}
   .row-line.travel-line{color:var(--teal-deep);font-weight:600;}
   .row-line.travel-line.travel-pending{color:var(--ink-soft);font-weight:400;font-style:italic;}
@@ -261,6 +261,13 @@
         </select>
       </div>
 
+      <div class="field">
+        <span class="field-label">Category <span class="opt">(optional)</span></span>
+        <select id="categorySelect">
+          <option value="">All categories</option>
+        </select>
+      </div>
+
       <div class="field date-field">
         <span class="field-label">From <span class="opt">(optional)</span></span>
         <input type="date" id="rangeStart">
@@ -271,6 +278,13 @@
       </div>
 
       <button class="pill-btn" id="clearAllBtn">Clear all</button>
+    </div>
+
+    <div class="row title-search-row">
+      <div class="field title-search-field">
+        <span class="field-label">Session title <span class="opt">(optional)</span></span>
+        <input type="text" id="titleSearch" placeholder="Search by session name…">
+      </div>
     </div>
 
     <div class="row" style="justify-content:space-between;">
@@ -417,6 +431,8 @@ const TODAY_ISO = isoDateOnly(TODAY);
 const state = {
   roleIdxs: new Set(),
   site: '',
+  category: '',
+  titleSearch: '',
   hideLogistics: true,
   rangeStart: TODAY_ISO,
   rangeEnd: '',
@@ -463,6 +479,13 @@ sites.forEach((s,i)=>{
   siteSelect.appendChild(opt);
 });
 
+const categorySelect = document.getElementById('categorySelect');
+categories.forEach((c,i)=>{
+  const opt = document.createElement('option');
+  opt.value = i; opt.textContent = c;
+  categorySelect.appendChild(opt);
+});
+
 const roleDropdown = document.getElementById('roleDropdown');
 const clearRolesBtn = document.createElement('button');
 clearRolesBtn.className = 'clear-btn';
@@ -498,7 +521,14 @@ document.addEventListener('click', (e)=>{
 });
 
 siteSelect.addEventListener('change', (e)=>{ state.site = e.target.value; render(); });
+categorySelect.addEventListener('change', (e)=>{ state.category = e.target.value; render(); });
 document.getElementById('hideLogistics').addEventListener('change', (e)=>{ state.hideLogistics = e.target.checked; render(); });
+
+const titleSearchInput = document.getElementById('titleSearch');
+titleSearchInput.addEventListener('input', (e)=>{
+  state.titleSearch = e.target.value.trim().toLowerCase();
+  render();
+});
 
 const rangeStartInput = document.getElementById('rangeStart');
 const rangeEndInput = document.getElementById('rangeEnd');
@@ -520,6 +550,8 @@ document.getElementById('clearAllBtn').onclick = () => {
   state.roleIdxs.clear();
   roleDropdown.querySelectorAll('input[type=checkbox]').forEach(cb=>cb.checked=false);
   state.site = ''; siteSelect.value = '';
+  state.category = ''; categorySelect.value = '';
+  state.titleSearch = ''; titleSearchInput.value = '';
   state.rangeStart = ''; state.rangeEnd = '';
   rangeStartInput.value = ''; rangeEndInput.value = '';
   render();
@@ -690,6 +722,8 @@ function matchesSiteRole(item){
   } else {
     return false; // role required — nothing matches until at least one role is chosen
   }
+  if(state.category !== '' && item.c !== Number(state.category)) return false;
+  if(state.titleSearch && !item.n.toLowerCase().includes(state.titleSearch)) return false;
   return true;
 }
 // site + role + logistics only (date-agnostic) — used for calendar dot counts and day summary lookups.
@@ -726,6 +760,8 @@ function renderActiveFilters(){
   activeFilters.innerHTML = '';
   const tags = [];
   if(state.site !== '') tags.push({label: sites[Number(state.site)], clear: ()=>{state.site='';siteSelect.value='';render();}});
+  if(state.category !== '') tags.push({label: categories[Number(state.category)], clear: ()=>{state.category='';categorySelect.value='';render();}});
+  if(state.titleSearch) tags.push({label: '"' + state.titleSearch + '"', clear: ()=>{state.titleSearch='';titleSearchInput.value='';render();}});
   state.roleIdxs.forEach(ri => tags.push({label: roles[ri], clear: ()=>{
     state.roleIdxs.delete(ri);
     const cb = roleDropdown.querySelector('input[value="'+ri+'"]');
