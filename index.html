@@ -242,6 +242,8 @@
     padding:16px 18px;margin:-6px 0 16px;font-size:13.5px;
   }
   .subscribe-panel p{margin:0 0 10px;}
+  .subscribe-filter-row{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:12px;}
+  .subscribe-filter-row select{min-width:220px;}
   .subscribe-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;}
   .subscribe-row input[type="text"]{
     flex:1;min-width:240px;font-family:inherit;font-size:13px;border:1px solid var(--line);
@@ -287,14 +289,24 @@
     <button class="cta-btn cta-btn-alt" id="subscribeCalBtn" type="button">📆 Subscribe to full PL Calendar</button>
   </div>
   <div id="subscribePanel" class="subscribe-panel" style="display:none;">
-    <p>Subscribe once and every PL session (current and future) shows up on your own calendar automatically — no need to add sessions one at a time.</p>
+    <p>Subscribe once and matching PL sessions (current and future) show up on your own calendar automatically — no need to add sessions one at a time.</p>
+    <div class="subscribe-filter-row">
+      <div class="field">
+        <span class="field-label">Role</span>
+        <select id="subscribeRoleSelect"></select>
+      </div>
+      <div class="field">
+        <span class="field-label">Site</span>
+        <select id="subscribeSiteSelect"></select>
+      </div>
+    </div>
     <div class="subscribe-row">
-      <input type="text" id="subscribeUrlInput" readonly value="https://emagana-cpu.github.io/voicesprofessionallearning/pl-calendar.ics">
+      <input type="text" id="subscribeUrlInput" readonly value="">
       <button class="pill-btn" id="subscribeCopyBtn" type="button">Copy link</button>
     </div>
     <ul class="subscribe-instructions">
       <li><b>Google Calendar (web):</b> Settings (gear icon) → "Add calendar" → "From URL" → paste the link above → Add calendar.</li>
-      <li><b>Apple Calendar / iPhone:</b> <a href="webcal://emagana-cpu.github.io/voicesprofessionallearning/pl-calendar.ics">tap here to subscribe directly</a>.</li>
+      <li><b>Apple Calendar / iPhone:</b> <a id="subscribeWebcalLink" href="#">tap here to subscribe directly</a>.</li>
       <li><b>Outlook:</b> Add calendar → "Subscribe from web" → paste the link above.</li>
     </ul>
     <div class="travel-attrib">Calendars typically re-check subscribed feeds every few hours, so new or changed sessions may take a little while to appear — this isn't instant.</div>
@@ -1273,16 +1285,71 @@ function setPage(p){
 pageTabSessions.onclick = () => setPage('sessions');
 pageTabAttendance.onclick = () => setPage('attendance');
 
-// ---------- Subscribe to full calendar feed ----------
+// ---------- Subscribe to full calendar feed (tailored by role/site) ----------
+const SITE_BASE_URL = 'https://emagana-cpu.github.io/voicesprofessionallearning';
+
+function slugify(s){
+  return String(s).toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+const roleSlugs = roles.map(slugify);
+const siteSlugs = sites.map(slugify);
+
 const subscribeCalBtn = document.getElementById('subscribeCalBtn');
 const subscribePanel = document.getElementById('subscribePanel');
 const subscribeCopyBtn = document.getElementById('subscribeCopyBtn');
 const subscribeUrlInput = document.getElementById('subscribeUrlInput');
+const subscribeRoleSelect = document.getElementById('subscribeRoleSelect');
+const subscribeSiteSelect = document.getElementById('subscribeSiteSelect');
+const subscribeWebcalLink = document.getElementById('subscribeWebcalLink');
+
+if(subscribeRoleSelect){
+  subscribeRoleSelect.innerHTML = `<option value="">All Staff (everyone)</option>` +
+    roles.map((r,i) => i === 0 ? '' : `<option value="${i}">${r}</option>`).join('');
+}
+if(subscribeSiteSelect){
+  subscribeSiteSelect.innerHTML = `<option value="">All Sites</option>` +
+    sites.map((s,i) => `<option value="${i}">${s}</option>`).join('');
+}
+
+function subscribeFeedPath(){
+  const ri = subscribeRoleSelect && subscribeRoleSelect.value !== '' ? Number(subscribeRoleSelect.value) : null;
+  const si = subscribeSiteSelect && subscribeSiteSelect.value !== '' ? Number(subscribeSiteSelect.value) : null;
+  if(ri === null && si === null) return 'pl-calendar.ics';
+  if(ri !== null && si === null) return `ics/pl-calendar-role-${roleSlugs[ri]}.ics`;
+  if(ri === null && si !== null) return `ics/pl-calendar-site-${siteSlugs[si]}.ics`;
+  return `ics/pl-calendar-role-${roleSlugs[ri]}-site-${siteSlugs[si]}.ics`;
+}
+
+function updateSubscribeUrl(){
+  const path = subscribeFeedPath();
+  const url = `${SITE_BASE_URL}/${path}`;
+  if(subscribeUrlInput) subscribeUrlInput.value = url;
+  if(subscribeWebcalLink) subscribeWebcalLink.href = url.replace(/^https:\/\//, 'webcal://');
+}
+
+function prefillSubscribeFromCurrentFilters(){
+  if(subscribeSiteSelect) subscribeSiteSelect.value = state.site || '';
+  if(subscribeRoleSelect){
+    subscribeRoleSelect.value = (state.roleIdxs.size === 1 && ![...state.roleIdxs].includes(0))
+      ? [...state.roleIdxs][0]
+      : '';
+  }
+  updateSubscribeUrl();
+}
+
 if(subscribeCalBtn && subscribePanel){
   subscribeCalBtn.addEventListener('click', () => {
-    subscribePanel.style.display = subscribePanel.style.display === 'none' ? '' : 'none';
+    const opening = subscribePanel.style.display === 'none';
+    subscribePanel.style.display = opening ? '' : 'none';
+    if(opening) prefillSubscribeFromCurrentFilters();
   });
 }
+if(subscribeRoleSelect) subscribeRoleSelect.addEventListener('change', updateSubscribeUrl);
+if(subscribeSiteSelect) subscribeSiteSelect.addEventListener('change', updateSubscribeUrl);
+
 if(subscribeCopyBtn && subscribeUrlInput){
   subscribeCopyBtn.addEventListener('click', async () => {
     try{
