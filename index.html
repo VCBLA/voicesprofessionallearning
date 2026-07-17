@@ -208,6 +208,8 @@
   .modal-section{margin-top:16px;}
   .modal-section h4{font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);margin:0 0 6px;font-weight:700;}
   .modal-section p{margin:0;font-size:14.5px;}
+  .modal-cal-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}
+  .modal-cal-actions .pill-btn{text-decoration:none;display:inline-flex;align-items:center;}
   .modal-roles{display:flex;flex-wrap:wrap;gap:6px;}
   .modal-roles .tag{background:var(--paper);}
 
@@ -233,6 +235,20 @@
   }
   .cta-btn:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(124,179,66,.45);}
   .cta-btn:focus-visible{outline:2px solid var(--focus);outline-offset:2px;}
+  .cta-btn-alt{background:var(--teal);box-shadow:0 6px 18px rgba(91,31,158,.35);border:none;cursor:pointer;font-family:inherit;}
+  .cta-btn-alt:hover{box-shadow:0 8px 22px rgba(91,31,158,.45);}
+  .subscribe-panel{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:16px 18px;margin:-6px 0 16px;font-size:13.5px;
+  }
+  .subscribe-panel p{margin:0 0 10px;}
+  .subscribe-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;}
+  .subscribe-row input[type="text"]{
+    flex:1;min-width:240px;font-family:inherit;font-size:13px;border:1px solid var(--line);
+    border-radius:10px;padding:9px 12px;background:var(--paper);color:var(--ink-soft);
+  }
+  .subscribe-instructions{margin:0 0 10px;padding-left:20px;}
+  .subscribe-instructions li{margin-bottom:4px;}
 
   .page-nav{display:flex;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:3px;width:fit-content;margin-bottom:22px;}
   .page-tab{border:none;background:none;padding:9px 18px;border-radius:999px;font-family:inherit;font-size:14px;font-weight:700;color:var(--ink-soft);cursor:pointer;}
@@ -266,8 +282,22 @@
     <path d="M0,5 Q15,12 30,5 T60,5 T90,5 T120,5 T150,5 T180,5 T210,5 T240,5 T270,5 T300,5 T330,5 T360,5 T390,5 T420,5 T450,5 T480,5 T510,5 T540,5 T570,5 T600,5" fill="none" stroke="#5B1F9E" stroke-width="1.6" opacity="0.7"/>
   </svg>
 
-  <div class="cta-row">
+  <div class="cta-row" style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;">
     <a class="cta-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfI3X8mOgkX7Jkhkq64jjQAuPNFn_LUygLcutHLb7z9mfVofg/viewform?usp=dialog" target="_blank" rel="noopener">📝 Log your attendance for each session here!</a>
+    <button class="cta-btn cta-btn-alt" id="subscribeCalBtn" type="button">📆 Subscribe to full PL Calendar</button>
+  </div>
+  <div id="subscribePanel" class="subscribe-panel" style="display:none;">
+    <p>Subscribe once and every PL session (current and future) shows up on your own calendar automatically — no need to add sessions one at a time.</p>
+    <div class="subscribe-row">
+      <input type="text" id="subscribeUrlInput" readonly value="https://emagana-cpu.github.io/voicesprofessionallearning/pl-calendar.ics">
+      <button class="pill-btn" id="subscribeCopyBtn" type="button">Copy link</button>
+    </div>
+    <ul class="subscribe-instructions">
+      <li><b>Google Calendar (web):</b> Settings (gear icon) → "Add calendar" → "From URL" → paste the link above → Add calendar.</li>
+      <li><b>Apple Calendar / iPhone:</b> <a href="webcal://emagana-cpu.github.io/voicesprofessionallearning/pl-calendar.ics">tap here to subscribe directly</a>.</li>
+      <li><b>Outlook:</b> Add calendar → "Subscribe from web" → paste the link above.</li>
+    </ul>
+    <div class="travel-attrib">Calendars typically re-check subscribed feeds every few hours, so new or changed sessions may take a little while to appear — this isn't instant.</div>
   </div>
 
   <div class="page-nav" role="tablist" aria-label="Portal section">
@@ -946,6 +976,70 @@ function renderDaySummary(nonDateFiltered, mealItems){
   }
 }
 
+// ---------- Calendar export (per-session) ----------
+function pad2(n){ return String(n).padStart(2, '0'); }
+
+function parseItemDate(str){
+  if(!str) return null;
+  const d = new Date(String(str).replace(' ', 'T'));
+  return isNaN(d.getTime()) ? null : d;
+}
+
+function toGCalDateStr(d){
+  return `${d.getFullYear()}${pad2(d.getMonth()+1)}${pad2(d.getDate())}T${pad2(d.getHours())}${pad2(d.getMinutes())}00`;
+}
+
+function googleCalendarUrl(item){
+  const start = parseItemDate(item.st);
+  if(!start) return null;
+  const end = parseItemDate(item.en) || start;
+  const params = new URLSearchParams({
+    action: 'TEMPLATE',
+    text: item.n || 'PL Session',
+    dates: `${toGCalDateStr(start)}/${toGCalDateStr(end)}`,
+    details: item.d || '',
+    location: item.loc || ''
+  });
+  return `https://calendar.google.com/calendar/render?${params.toString()}`;
+}
+
+function icsEscape(s){
+  return String(s ?? '').replace(/\\/g,'\\\\').replace(/;/g,'\\;').replace(/,/g,'\\,').replace(/\n/g,'\\n');
+}
+
+function buildIcsEvent(item){
+  const start = parseItemDate(item.st);
+  if(!start) return null;
+  const end = parseItemDate(item.en) || start;
+  const lines = [
+    'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Voices PL Portal//EN','CALSCALE:GREGORIAN',
+    'BEGIN:VEVENT',
+    `UID:pl-${item.id}@voicesprofessionallearning`,
+    `DTSTAMP:${toGCalDateStr(new Date())}`,
+    `DTSTART:${toGCalDateStr(start)}`,
+    `DTEND:${toGCalDateStr(end)}`,
+    `SUMMARY:${icsEscape(item.n)}`,
+  ];
+  if(item.loc) lines.push(`LOCATION:${icsEscape(item.loc)}`);
+  if(item.d) lines.push(`DESCRIPTION:${icsEscape(item.d)}`);
+  lines.push('END:VEVENT','END:VCALENDAR');
+  return lines.join('\r\n');
+}
+
+function downloadIcsForItem(item){
+  const content = buildIcsEvent(item);
+  if(!content) return;
+  const blob = new Blob([content], { type: 'text/calendar;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `${(item.n || 'session').replace(/[^\w\-]+/g,'_').slice(0,60)}.ics`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 2000);
+}
+
 // ---------- Cards ----------
 function cardHTML(item){
   const siteNames = item.s.map(i=>sites[i]);
@@ -996,6 +1090,10 @@ function openModal(item){
     <div class="modal-section">
       <h4>When</h4>
       <p>${fmtDateRange(item.st, item.en)}</p>
+      <div class="modal-cal-actions">
+        ${googleCalendarUrl(item) ? `<a class="pill-btn" href="${googleCalendarUrl(item)}" target="_blank" rel="noopener">📅 Add to Google Calendar</a>` : ''}
+        <button class="pill-btn" id="modalIcsBtn" type="button">⬇ Download .ics</button>
+      </div>
     </div>
     ${item.loc ? `<div class="modal-section"><h4>Where</h4><p>${item.loc}</p>${travelHTML(item)}</div>` : ''}
     ${siteNames.length ? `<div class="modal-section"><h4>Sites</h4><p>${siteNames.join(', ')}</p></div>` : ''}
@@ -1004,6 +1102,8 @@ function openModal(item){
     ${roleNames.length ? `<div class="modal-section"><h4>Audience / Roles</h4><div class="modal-roles">${roleNames.map(r=>`<span class="tag">${r}</span>`).join('')}</div></div>` : ''}
   `;
   document.getElementById('modalBackdrop').classList.add('open');
+  const icsBtn = document.getElementById('modalIcsBtn');
+  if(icsBtn) icsBtn.addEventListener('click', () => downloadIcsForItem(item));
 }
 document.getElementById('modalClose').onclick = () => document.getElementById('modalBackdrop').classList.remove('open');
 document.getElementById('modalBackdrop').addEventListener('click', (e)=>{
@@ -1172,6 +1272,30 @@ function setPage(p){
 }
 pageTabSessions.onclick = () => setPage('sessions');
 pageTabAttendance.onclick = () => setPage('attendance');
+
+// ---------- Subscribe to full calendar feed ----------
+const subscribeCalBtn = document.getElementById('subscribeCalBtn');
+const subscribePanel = document.getElementById('subscribePanel');
+const subscribeCopyBtn = document.getElementById('subscribeCopyBtn');
+const subscribeUrlInput = document.getElementById('subscribeUrlInput');
+if(subscribeCalBtn && subscribePanel){
+  subscribeCalBtn.addEventListener('click', () => {
+    subscribePanel.style.display = subscribePanel.style.display === 'none' ? '' : 'none';
+  });
+}
+if(subscribeCopyBtn && subscribeUrlInput){
+  subscribeCopyBtn.addEventListener('click', async () => {
+    try{
+      await navigator.clipboard.writeText(subscribeUrlInput.value);
+    } catch(e){
+      subscribeUrlInput.select();
+      try{ document.execCommand('copy'); }catch(e2){ /* ignore */ }
+    }
+    const original = subscribeCopyBtn.textContent;
+    subscribeCopyBtn.textContent = 'Copied!';
+    setTimeout(() => { subscribeCopyBtn.textContent = original; }, 1800);
+  });
+}
 
 // ---------- Attendance lookup mode (by session / by email) ----------
 const attModeSession = document.getElementById('attModeSession');
