@@ -1366,11 +1366,11 @@ function renderAttEmailResult(email){
   const rows = recs.map(r => {
     const it = itemById[r.s];
     const label = it ? `${escapeHtml(it.n)} — ${escapeHtml(fmtDateRange(it.st, it.en))}` : `(session ${escapeHtml(r.s)})`;
-    return `<tr><td>${label}</td><td>${r.r !== null && r.r !== undefined ? '★ ' + r.r : '—'}</td><td>${escapeHtml(r.k || '—')}</td></tr>`;
+    return `<tr><td>${label}</td></tr>`;
   }).join('');
   box.innerHTML = `
     <table class="summary-table" style="margin-top:14px;">
-      <thead><tr><th>Session</th><th>Rating</th><th>Key takeaway</th></tr></thead>
+      <thead><tr><th>Session</th></tr></thead>
       <tbody>${rows}</tbody>
     </table>
   `;
