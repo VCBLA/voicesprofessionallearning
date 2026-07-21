@@ -244,6 +244,17 @@
   }
   .cta-btn:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(124,179,66,.45);}
   .cta-btn:focus-visible{outline:2px solid var(--focus);outline-offset:2px;}
+  .cta-btn-admin{
+    display:inline-flex;align-items:center;gap:8px;background:var(--paper);color:var(--teal-deep);
+    font-weight:700;font-size:14.5px;padding:11px 20px;border-radius:999px;text-decoration:none;
+    border:1.5px solid var(--teal-deep);transition:transform .12s, box-shadow .12s, background .12s;
+  }
+  .cta-btn-admin:hover{transform:translateY(-1px);background:#fff;box-shadow:0 6px 16px rgba(91,31,158,.18);}
+  .cta-btn-admin:focus-visible{outline:2px solid var(--focus);outline-offset:2px;}
+  .cta-btn-admin .admin-badge{
+    font-size:10px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;
+    background:var(--teal-deep);color:#fff;padding:2px 7px;border-radius:999px;
+  }
   .page-nav{display:flex;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:3px;width:fit-content;margin-bottom:22px;}
   .page-tab{border:none;background:none;padding:9px 18px;border-radius:999px;font-family:inherit;font-size:14px;font-weight:700;color:var(--ink-soft);cursor:pointer;}
   .page-tab.active{background:var(--teal);color:#fff;}
@@ -278,6 +289,7 @@
 
   <div class="cta-row" style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;">
     <a class="cta-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfI3X8mOgkX7Jkhkq64jjQAuPNFn_LUygLcutHLb7z9mfVofg/viewform?usp=dialog" target="_blank" rel="noopener">📝 Log your attendance for each session here!</a>
+    <a class="cta-btn-admin" href="https://docs.google.com/document/d/11LpNqYwEbqKKweNtAVHbVryq7tW51ZH7Ne4YQvPaKrg/edit?tab=t.0" target="_blank" rel="noopener">🔒 Admin Document <span class="admin-badge">Admins only</span></a>
   </div>
 
   <div class="page-nav" role="tablist" aria-label="Portal section">
