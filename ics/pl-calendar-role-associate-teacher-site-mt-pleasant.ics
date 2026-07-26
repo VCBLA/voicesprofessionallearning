@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Voices PL Portal//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Voices PL — Associate Teacher @ Mt. Pleasant
+X-WR-CALDESC:Professional Learning sessions for Voices College-Bound Language Academies staff.
+BEGIN:VEVENT
+UID:pl-12306872165@voicesprofessionallearning
+DTSTAMP:20260725T223526Z
+DTSTART:20260806T153000Z
+DTEND:20260806T183000Z
+SUMMARY:TK Learning Genie Assessment Module + TK Scope and Sequence
+DESCRIPTION:In this virtual training\, TK teachers & assistants will learn how to navigate the Learning Genie assessment system to easily track student progress and early childhood milestones. Educators will explore the platform's digital tools to streamline their daily observation and documentation processes for the upcoming school year. https://voicescharterschool.zoom.us/j/83904071321
+END:VEVENT
+END:VCALENDAR
