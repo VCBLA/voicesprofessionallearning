@@ -7,10 +7,19 @@ X-WR-CALNAME:Voices PL — Associate Teacher
 X-WR-CALDESC:Professional Learning sessions for Voices College-Bound Language Academies staff.
 BEGIN:VEVENT
 UID:pl-12306872165@voicesprofessionallearning
-DTSTAMP:20260725T223526Z
+DTSTAMP:20260727T171911Z
 DTSTART:20260806T153000Z
 DTEND:20260806T183000Z
 SUMMARY:TK Learning Genie Assessment Module + TK Scope and Sequence
 DESCRIPTION:In this virtual training\, TK teachers & assistants will learn how to navigate the Learning Genie assessment system to easily track student progress and early childhood milestones. Educators will explore the platform's digital tools to streamline their daily observation and documentation processes for the upcoming school year. https://voicescharterschool.zoom.us/j/83904071321
+END:VEVENT
+BEGIN:VEVENT
+UID:pl-12632311023@voicesprofessionallearning
+DTSTAMP:20260727T171911Z
+DTSTART:20260728T144500Z
+DTEND:20260731T231500Z
+SUMMARY:WCC All Staff On site
+LOCATION:Voices College-bound Language Academies\, Richmond\, CA\, USA
+DESCRIPTION:School Site Prep
 END:VEVENT
 END:VCALENDAR

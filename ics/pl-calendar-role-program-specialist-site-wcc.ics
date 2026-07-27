@@ -7,15 +7,23 @@ X-WR-CALNAME:Voices PL — Program Specialist @ WCC
 X-WR-CALDESC:Professional Learning sessions for Voices College-Bound Language Academies staff.
 BEGIN:VEVENT
 UID:pl-12306737886@voicesprofessionallearning
-DTSTAMP:20260725T223526Z
+DTSTAMP:20260727T171911Z
 DTSTART:20260728T160000Z
 DTEND:20260728T190000Z
 SUMMARY:MTSS: Tiered Supports
-DESCRIPTION:Tiered supports vs SPED  ELD/SLD SPED  Panorama  Director of Student and Family Services
+END:VEVENT
+BEGIN:VEVENT
+UID:pl-12306718895@voicesprofessionallearning
+DTSTAMP:20260727T171911Z
+DTSTART:20260730T153000Z
+DTEND:20260730T193000Z
+SUMMARY:Ensemble Comprehensible Input/Output
+LOCATION:Voices College-bound Language Academies\, Richmond\, CA\, USA
+DESCRIPTION:In this professional development session\, educators will learn how to design dual language classrooms\, implement strategic language separation\, and establish routines that strengthen the language of instruction. Teachers will also explore high-leverage oracy strategies.
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12306798574@voicesprofessionallearning
-DTSTAMP:20260725T223526Z
+DTSTAMP:20260727T171911Z
 DTSTART:20260803T160000Z
 DTEND:20260803T190000Z
 SUMMARY:TK-3rd Grade Alignment
@@ -24,7 +32,7 @@ DESCRIPTION:ONLY FOR TK-3rd: The session will focus on the California Preschool 
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12306847493@voicesprofessionallearning
-DTSTAMP:20260725T223526Z
+DTSTAMP:20260727T171911Z
 DTSTART:20260803T200000Z
 DTEND:20260803T230000Z
 SUMMARY:TK PTKLF
@@ -33,7 +41,7 @@ DESCRIPTION:ONLY TK: Learning all about the PTKLF and how to implement it.
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12306844649@voicesprofessionallearning
-DTSTAMP:20260725T223526Z
+DTSTAMP:20260727T171911Z
 DTSTART:20260804T153000Z
 DTEND:20260804T173000Z
 SUMMARY:TK-8th UC Davis: CA Social Studies/History Framework
@@ -41,7 +49,7 @@ DESCRIPTION:Learn all about the California History and Social Studies Standards 
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12306659628@voicesprofessionallearning
-DTSTAMP:20260725T223526Z
+DTSTAMP:20260727T171911Z
 DTSTART:20260728T160000Z
 DTEND:20260728T223000Z
 SUMMARY:Character-Based Behavior System
@@ -50,7 +58,7 @@ DESCRIPTION:Roxanna – Work with leadership to set them up to deliver training 
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12321391103@voicesprofessionallearning
-DTSTAMP:20260725T223526Z
+DTSTAMP:20260727T171911Z
 DTSTART:20260812T204500Z
 DTEND:20260812T220000Z
 SUMMARY:WCC:GenEd supporting students with IEPs
@@ -59,7 +67,7 @@ DESCRIPTION:School site discretion
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12414659903@voicesprofessionallearning
-DTSTAMP:20260725T223526Z
+DTSTAMP:20260727T171911Z
 DTSTART:20260723T163000Z
 DTEND:20260723T190000Z
 SUMMARY:Ensemble Leader PD
@@ -68,7 +76,7 @@ DESCRIPTION:https://us02web.zoom.us/j/83463420633?pwd=yK7I9Is6OtDFWxONdE2r48SvLe
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12414657693@voicesprofessionallearning
-DTSTAMP:20260725T223526Z
+DTSTAMP:20260727T171911Z
 DTSTART:20260723T200000Z
 DTEND:20260723T213000Z
 SUMMARY:Ensemble Leader PD Continued
