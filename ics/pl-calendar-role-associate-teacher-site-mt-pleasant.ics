@@ -7,10 +7,19 @@ X-WR-CALNAME:Voices PL — Associate Teacher @ Mt. Pleasant
 X-WR-CALDESC:Professional Learning sessions for Voices College-Bound Language Academies staff.
 BEGIN:VEVENT
 UID:pl-12306872165@voicesprofessionallearning
-DTSTAMP:20260727T171911Z
+DTSTAMP:20260729T173644Z
 DTSTART:20260806T153000Z
 DTEND:20260806T183000Z
 SUMMARY:TK Learning Genie Assessment Module + TK Scope and Sequence
 DESCRIPTION:In this virtual training\, TK teachers & assistants will learn how to navigate the Learning Genie assessment system to easily track student progress and early childhood milestones. Educators will explore the platform's digital tools to streamline their daily observation and documentation processes for the upcoming school year. https://voicescharterschool.zoom.us/j/83904071321
+END:VEVENT
+BEGIN:VEVENT
+UID:pl-12323927842@voicesprofessionallearning
+DTSTAMP:20260729T173644Z
+DTSTART:20260731T180000Z
+DTEND:20260731T231500Z
+SUMMARY:MP All Staff Meeting
+LOCATION:Voices Academy Mount Pleasant\, Story Road\, San Jose\, CA\, USA
+DESCRIPTION:Mount Pleasant PD:\nLunch 11:30- 12:00 pm\nAll staff Meeting:  12:00 pm - 4:00 pm\nNuts and Bolts\; Safety Protocols\, Drills & Supervision\; Vision & Mission\, Goal Setting
 END:VEVENT
 END:VCALENDAR

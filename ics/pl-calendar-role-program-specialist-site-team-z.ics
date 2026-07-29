@@ -5,4 +5,22 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Voices PL — Program Specialist @ Team Z
 X-WR-CALDESC:Professional Learning sessions for Voices College-Bound Language Academies staff.
+BEGIN:VEVENT
+UID:pl-12306718895@voicesprofessionallearning
+DTSTAMP:20260729T173644Z
+DTSTART:20260730T153000Z
+DTEND:20260730T193000Z
+SUMMARY:Ensemble Comprehensible Input/Output
+LOCATION:Voices College-bound Language Academies\, Richmond\, CA\, USA
+DESCRIPTION:In this professional development session\, educators will learn how to design dual language classrooms\, implement strategic language separation\, and establish routines that strengthen the language of instruction. Teachers will also explore high-leverage oracy strategies.
+END:VEVENT
+BEGIN:VEVENT
+UID:pl-12306659628@voicesprofessionallearning
+DTSTAMP:20260729T173644Z
+DTSTART:20260728T160000Z
+DTEND:20260728T223000Z
+SUMMARY:Character-Based Behavior System
+LOCATION:Voices Academy Mount Pleasant\, Story Road\, San Jose\, CA\, USA
+DESCRIPTION:Roxanna – Work with leadership to set them up to deliver training and support to staff (Part 1 of Character-Based Behavior System):
+END:VEVENT
 END:VCALENDAR
