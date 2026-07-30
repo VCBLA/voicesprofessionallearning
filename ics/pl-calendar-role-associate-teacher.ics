@@ -3,11 +3,38 @@ VERSION:2.0
 PRODID:-//Voices PL Portal//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Voices PL — Associate Teacher
+X-WR-CALNAME:Voices PL - Associate Teacher
 X-WR-CALDESC:Professional Learning sessions for Voices College-Bound Language Academies staff.
 BEGIN:VEVENT
+UID:pl-12306856037@voicesprofessionallearning
+DTSTAMP:20260730T171223Z
+DTSTART:20260803T201500Z
+DTEND:20260803T231500Z
+SUMMARY:For MH\, MP\, FMSD Staff: K-8 Avanza + Boost
+LOCATION:Voices College-Bound Language Academy\, Hellyer Avenue\, San Jose\, CA\, USA
+DESCRIPTION:In this in-person session\, educators will get hands-on training with Vista’s Avanza and Boost platforms to set their ELD/SLD block up for success at the start of the school year. Teachers will learn how to navigate both digital systems and leverage their key tools to drive effective\, language-rich instruction from day one.
+END:VEVENT
+BEGIN:VEVENT
+UID:pl-12306825196@voicesprofessionallearning
+DTSTAMP:20260730T171223Z
+DTSTART:20260806T153000Z
+DTEND:20260806T183000Z
+SUMMARY:For WCC Staff: K-8 Avanza + Boost
+LOCATION:Voices College-bound Language Academies\, Richmond\, CA\, USA
+DESCRIPTION:In this in-person session\, educators will get hands-on training with Vista’s Avanza and Boost platforms to set their ELD/SLD block up for success at the start of the school year. Teachers will learn how to navigate both digital systems and leverage their key tools to drive effective\, language-rich instruction from day one.
+END:VEVENT
+BEGIN:VEVENT
+UID:pl-12306845361@voicesprofessionallearning
+DTSTAMP:20260730T171223Z
+DTSTART:20260806T203000Z
+DTEND:20260806T233000Z
+SUMMARY:For Stockton Staff: K-8 Avanza + Boost
+LOCATION:123 East Weber Avenue\, Stockton\, CA\, USA
+DESCRIPTION:In this in-person session\, educators will get hands-on training with Vista’s Avanza and Boost platforms to set their ELD/SLD block up for success at the start of the school year. Teachers will learn how to navigate both digital systems and leverage their key tools to drive effective\, language-rich instruction from day one.
+END:VEVENT
+BEGIN:VEVENT
 UID:pl-12306872165@voicesprofessionallearning
-DTSTAMP:20260729T173644Z
+DTSTAMP:20260730T171223Z
 DTSTART:20260806T153000Z
 DTEND:20260806T183000Z
 SUMMARY:TK Learning Genie Assessment Module + TK Scope and Sequence
@@ -15,7 +42,7 @@ DESCRIPTION:In this virtual training\, TK teachers & assistants will learn how t
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12323927842@voicesprofessionallearning
-DTSTAMP:20260729T173644Z
+DTSTAMP:20260730T171223Z
 DTSTART:20260731T180000Z
 DTEND:20260731T231500Z
 SUMMARY:MP All Staff Meeting
@@ -24,7 +51,7 @@ DESCRIPTION:Mount Pleasant PD:\nLunch 11:30- 12:00 pm\nAll staff Meeting:  12:00
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12632311023@voicesprofessionallearning
-DTSTAMP:20260729T173644Z
+DTSTAMP:20260730T171223Z
 DTSTART:20260728T144500Z
 DTEND:20260731T231500Z
 SUMMARY:WCC All Staff On site
