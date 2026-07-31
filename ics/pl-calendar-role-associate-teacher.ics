@@ -3,11 +3,52 @@ VERSION:2.0
 PRODID:-//Voices PL Portal//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Voices PL - Associate Teacher
+X-WR-CALNAME:Voices PL — Associate Teacher
 X-WR-CALDESC:Professional Learning sessions for Voices College-Bound Language Academies staff.
 BEGIN:VEVENT
+UID:pl-12674709467@voicesprofessionallearning
+DTSTAMP:20260731T204956Z
+DTSTART:20260805T183000Z
+DTEND:20260805T191500Z
+SUMMARY:Deep Dive into Grade Level Standards
+LOCATION:16505 Monterey Rd\, Morgan Hill\, CA\, USA
+END:VEVENT
+BEGIN:VEVENT
+UID:pl-12606844194@voicesprofessionallearning
+DTSTAMP:20260731T204956Z
+DTSTART:20260804T214500Z
+DTEND:20260804T230000Z
+SUMMARY:Warm Demanders & Cognitive Redlining
+LOCATION:16505 Monterey Rd\, Morgan Hill\, CA\, USA
+END:VEVENT
+BEGIN:VEVENT
+UID:pl-12606907872@voicesprofessionallearning
+DTSTAMP:20260731T204956Z
+DTSTART:20260804T200000Z
+DTEND:20260804T213000Z
+SUMMARY:All-Staff Meeting
+LOCATION:16505 Monterey Rd\, Morgan Hill\, CA\, USA
+END:VEVENT
+BEGIN:VEVENT
+UID:pl-12606830002@voicesprofessionallearning
+DTSTAMP:20260731T204956Z
+DTSTART:20260731T180000Z
+DTEND:20260731T190000Z
+SUMMARY:Academic Schedules & LOI
+LOCATION:16505 Monterey Rd\, Morgan Hill\, CA\, USA
+END:VEVENT
+BEGIN:VEVENT
+UID:pl-12306798574@voicesprofessionallearning
+DTSTAMP:20260731T204956Z
+DTSTART:20260803T160000Z
+DTEND:20260803T190000Z
+SUMMARY:TK-3rd Grade Alignment
+LOCATION:Santa Clara County Office of Education\, Ridder Park Drive\, San Jose\, CA\, USA
+DESCRIPTION:ONLY FOR TK-3rd: The session will focus on the California Preschool through Third Grade (PK-3) Learning Progressions which map the developmental pathways of children's knowledge and skills over time. They ensure continuous\, developmentally appropriate education by linking early learning foundations to later elementary standards across five core developmental domains.\n\nThe session will be recorded\; therefore\, a waiver must be signed upon arrival and check-in.\n\nThere will be assigned seating.
+END:VEVENT
+BEGIN:VEVENT
 UID:pl-12306856037@voicesprofessionallearning
-DTSTAMP:20260730T171223Z
+DTSTAMP:20260731T204956Z
 DTSTART:20260803T201500Z
 DTEND:20260803T231500Z
 SUMMARY:For MH\, MP\, FMSD Staff: K-8 Avanza + Boost
@@ -15,8 +56,24 @@ LOCATION:Voices College-Bound Language Academy\, Hellyer Avenue\, San Jose\, CA\
 DESCRIPTION:In this in-person session\, educators will get hands-on training with Vista’s Avanza and Boost platforms to set their ELD/SLD block up for success at the start of the school year. Teachers will learn how to navigate both digital systems and leverage their key tools to drive effective\, language-rich instruction from day one.
 END:VEVENT
 BEGIN:VEVENT
+UID:pl-12306844649@voicesprofessionallearning
+DTSTAMP:20260731T204956Z
+DTSTART:20260804T153000Z
+DTEND:20260804T173000Z
+SUMMARY:TK-8th UC Davis: CA Social Studies/History Framework
+DESCRIPTION:Learn all about the California History and Social Studies Standards and Framework. Virtual: https://voicescharterschool.zoom.us/j/82529509967
+END:VEVENT
+BEGIN:VEVENT
+UID:pl-12306867842@voicesprofessionallearning
+DTSTAMP:20260731T204956Z
+DTSTART:20260804T174500Z
+DTEND:20260804T194500Z
+SUMMARY:K-8 Studies Weekly Curriculum Training
+DESCRIPTION:In this virtual training\, educators will learn how to effectively blend the physical Studies Weekly newspaper format with its companion online tools to deliver engaging social studies instruction. Teachers will explore digital features\, interactive resources\, and implementation strategies to seamlessly bring this curriculum to life in their classrooms. https://us02web.zoom.us/j/88505147241?pwd=VZb0ZtRfRGjw7oTAkjQ7YItWSaOeNE.1
+END:VEVENT
+BEGIN:VEVENT
 UID:pl-12306825196@voicesprofessionallearning
-DTSTAMP:20260730T171223Z
+DTSTAMP:20260731T204956Z
 DTSTART:20260806T153000Z
 DTEND:20260806T183000Z
 SUMMARY:For WCC Staff: K-8 Avanza + Boost
@@ -25,7 +82,7 @@ DESCRIPTION:In this in-person session\, educators will get hands-on training wit
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12306845361@voicesprofessionallearning
-DTSTAMP:20260730T171223Z
+DTSTAMP:20260731T204956Z
 DTSTART:20260806T203000Z
 DTEND:20260806T233000Z
 SUMMARY:For Stockton Staff: K-8 Avanza + Boost
@@ -34,7 +91,7 @@ DESCRIPTION:In this in-person session\, educators will get hands-on training wit
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12306872165@voicesprofessionallearning
-DTSTAMP:20260730T171223Z
+DTSTAMP:20260731T204956Z
 DTSTART:20260806T153000Z
 DTEND:20260806T183000Z
 SUMMARY:TK Learning Genie Assessment Module + TK Scope and Sequence
@@ -42,20 +99,77 @@ DESCRIPTION:In this virtual training\, TK teachers & assistants will learn how t
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12323927842@voicesprofessionallearning
-DTSTAMP:20260730T171223Z
+DTSTAMP:20260731T204956Z
 DTSTART:20260731T180000Z
 DTEND:20260731T231500Z
 SUMMARY:MP All Staff Meeting
 LOCATION:Voices Academy Mount Pleasant\, Story Road\, San Jose\, CA\, USA
-DESCRIPTION:Mount Pleasant PD:\nLunch 11:30- 12:00 pm\nAll staff Meeting:  12:00 pm - 4:00 pm\nNuts and Bolts\; Safety Protocols\, Drills & Supervision\; Vision & Mission\, Goal Setting
+DESCRIPTION:Mount Pleasant PD: 11 -12 pm part 1\nLunch 12:00- 12:30 pm\nAll staff Meeting:  12:30 pm - 4:00 pm part 2\nNuts and Bolts\; Safety Protocols\, Drills & Supervision\; Vision & Mission\, Goal Setting
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12632311023@voicesprofessionallearning
-DTSTAMP:20260730T171223Z
+DTSTAMP:20260731T204956Z
 DTSTART:20260728T144500Z
 DTEND:20260731T231500Z
 SUMMARY:WCC All Staff On site
 LOCATION:Voices College-bound Language Academies\, Richmond\, CA\, USA
 DESCRIPTION:School Site Prep
+END:VEVENT
+BEGIN:VEVENT
+UID:pl-12677872335@voicesprofessionallearning
+DTSTAMP:20260731T204956Z
+DTSTART:20260731T143000Z
+DTEND:20260731T150000Z
+SUMMARY:Breakfast
+LOCATION:Voices College-Bound Language Academy\, Hellyer Avenue\, San Jose\, CA\, USA
+DESCRIPTION:Staff Breakfast
+END:VEVENT
+BEGIN:VEVENT
+UID:pl-12674825166@voicesprofessionallearning
+DTSTAMP:20260731T204956Z
+DTSTART:20260805T213000Z
+DTEND:20260805T223000Z
+SUMMARY:Tiered Supports & Values Block
+LOCATION:16505 Monterey Rd\, Morgan Hill\, CA\, USA
+END:VEVENT
+BEGIN:VEVENT
+UID:pl-12674871161@voicesprofessionallearning
+DTSTAMP:20260731T204956Z
+DTSTART:20260806T193000Z
+DTEND:20260806T210000Z
+SUMMARY:Developing Strong Systems & Routines
+LOCATION:16505 Monterey Rd\, Morgan Hill\, CA\, USA
+END:VEVENT
+BEGIN:VEVENT
+UID:pl-12674934834@voicesprofessionallearning
+DTSTAMP:20260731T204956Z
+DTSTART:20260812T203000Z
+DTEND:20260812T211500Z
+SUMMARY:Reading Intervention Crash Course
+LOCATION:16505 Monterey Rd\, Morgan Hill\, CA\, USA
+END:VEVENT
+BEGIN:VEVENT
+UID:pl-12674974843@voicesprofessionallearning
+DTSTAMP:20260731T204956Z
+DTSTART:20260812T213000Z
+DTEND:20260812T221500Z
+SUMMARY:Strong Centers & Small Groups
+LOCATION:16505 Monterey Rd\, Morgan Hill\, CA\, USA
+END:VEVENT
+BEGIN:VEVENT
+UID:pl-12675057552@voicesprofessionallearning
+DTSTAMP:20260731T204956Z
+DTSTART:20260813T203000Z
+DTEND:20260813T213000Z
+SUMMARY:GenEdxSpEd Partnerships for Success
+LOCATION:16505 Monterey Rd\, Morgan Hill\, CA\, USA
+END:VEVENT
+BEGIN:VEVENT
+UID:pl-12678756355@voicesprofessionallearning
+DTSTAMP:20260731T204956Z
+DTSTART:20260731T144500Z
+DTEND:20260731T231500Z
+SUMMARY:WCC Prep & Plan
+LOCATION:Voices College Bound Language Academy\, Richmond
 END:VEVENT
 END:VCALENDAR
