@@ -3,18 +3,18 @@ VERSION:2.0
 PRODID:-//Voices PL Portal//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Voices PL — Program Specialist @ Mt. Pleasant
+X-WR-CALNAME:Voices PL — Program Specialist Special Education @ WCC
 X-WR-CALDESC:Professional Learning sessions for Voices College-Bound Language Academies staff.
 BEGIN:VEVENT
 UID:pl-12306737886@voicesprofessionallearning
-DTSTAMP:20260804T174418Z
+DTSTAMP:20260805T132902Z
 DTSTART:20260731T160000Z
 DTEND:20260731T180000Z
 SUMMARY:MTSS: Tiered Supports
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12306718895@voicesprofessionallearning
-DTSTAMP:20260804T174418Z
+DTSTAMP:20260805T132902Z
 DTSTART:20260730T153000Z
 DTEND:20260730T193000Z
 SUMMARY:Ensemble Comprehensible Input/Output
@@ -23,7 +23,7 @@ DESCRIPTION:In this professional development session\, educators will learn how 
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12306798574@voicesprofessionallearning
-DTSTAMP:20260804T174418Z
+DTSTAMP:20260805T132902Z
 DTSTART:20260803T160000Z
 DTEND:20260803T190000Z
 SUMMARY:TK-3rd Grade Alignment
@@ -31,17 +31,8 @@ LOCATION:Santa Clara County Office of Education\, Ridder Park Drive\, San Jose\,
 DESCRIPTION:ONLY FOR TK-3rd: The session will focus on the California Preschool through Third Grade (PK-3) Learning Progressions which map the developmental pathways of children's knowledge and skills over time. They ensure continuous\, developmentally appropriate education by linking early learning foundations to later elementary standards across five core developmental domains.\n\nThe session will be recorded\; therefore\, a waiver must be signed upon arrival and check-in.\n\nThere will be assigned seating.
 END:VEVENT
 BEGIN:VEVENT
-UID:pl-12306856037@voicesprofessionallearning
-DTSTAMP:20260804T174418Z
-DTSTART:20260803T201500Z
-DTEND:20260803T231500Z
-SUMMARY:For MH\, MP\, FMSD Staff: K-8 Avanza + Boost
-LOCATION:Voices College-Bound Language Academy\, Hellyer Avenue\, San Jose\, CA\, USA
-DESCRIPTION:In this in-person session\, educators will get hands-on training with Vista’s Avanza and Boost platforms to set their ELD/SLD block up for success at the start of the school year. Teachers will learn how to navigate both digital systems and leverage their key tools to drive effective\, language-rich instruction from day one.
-END:VEVENT
-BEGIN:VEVENT
 UID:pl-12306659628@voicesprofessionallearning
-DTSTAMP:20260804T174418Z
+DTSTAMP:20260805T132902Z
 DTSTART:20260728T160000Z
 DTEND:20260728T223000Z
 SUMMARY:Character-Based Behavior System
@@ -49,17 +40,17 @@ LOCATION:Voices Academy Mount Pleasant\, Story Road\, San Jose\, CA\, USA
 DESCRIPTION:Roxanna – Work with leadership to set them up to deliver training and support to staff (Part 1 of Character-Based Behavior System):
 END:VEVENT
 BEGIN:VEVENT
-UID:pl-12322024774@voicesprofessionallearning
-DTSTAMP:20260804T174418Z
-DTSTART:20260902T204500Z
-DTEND:20260902T220000Z
-SUMMARY:Gen Ed supporting different learners
-LOCATION:Voices Academy Mount Pleasant\, Story Road\, San Jose\, CA\, USA
-DESCRIPTION:How to support general education teachers with supporting different learners\, legal requirments\, and how to read an IEP.
+UID:pl-12321391103@voicesprofessionallearning
+DTSTAMP:20260805T132902Z
+DTSTART:20260812T204500Z
+DTEND:20260812T220000Z
+SUMMARY:WCC:GenEd supporting students with IEPs
+LOCATION:Voices College-bound Language Academies\, Richmond\, CA\, USA
+DESCRIPTION:School site discretion
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12414659903@voicesprofessionallearning
-DTSTAMP:20260804T174418Z
+DTSTAMP:20260805T132902Z
 DTSTART:20260723T163000Z
 DTEND:20260723T190000Z
 SUMMARY:Ensemble Leader PD
@@ -68,7 +59,7 @@ DESCRIPTION:https://us02web.zoom.us/j/83463420633?pwd=yK7I9Is6OtDFWxONdE2r48SvLe
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12414657693@voicesprofessionallearning
-DTSTAMP:20260804T174418Z
+DTSTAMP:20260805T132902Z
 DTSTART:20260723T200000Z
 DTEND:20260723T213000Z
 SUMMARY:Ensemble Leader PD Continued
@@ -77,11 +68,19 @@ DESCRIPTION:https://us02web.zoom.us/j/83463420633?pwd=yK7I9Is6OtDFWxONdE2r48SvLe
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12666778491@voicesprofessionallearning
-DTSTAMP:20260804T174418Z
+DTSTAMP:20260805T132902Z
 DTSTART:20260805T153000Z
 DTEND:20260805T163000Z
 SUMMARY:VMS Teachers Only: ELA/SLA Intro & Logic
 LOCATION:California\, USA
 DESCRIPTION:In this virtual session\, understand how the scope and sequences for language work in VMS.  Understand the opportunities and logic behind the guidelines and possible section projects.  Link: https://voicescharterschool.zoom.us/j/83558959840
+END:VEVENT
+BEGIN:VEVENT
+UID:pl-12678756355@voicesprofessionallearning
+DTSTAMP:20260805T132902Z
+DTSTART:20260731T144500Z
+DTEND:20260731T231500Z
+SUMMARY:WCC Prep & Plan
+LOCATION:Voices College Bound Language Academy\, Richmond
 END:VEVENT
 END:VCALENDAR
