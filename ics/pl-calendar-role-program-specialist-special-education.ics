@@ -7,14 +7,14 @@ X-WR-CALNAME:Voices PL — Program Specialist Special Education
 X-WR-CALDESC:Professional Learning sessions for Voices College-Bound Language Academies staff.
 BEGIN:VEVENT
 UID:pl-12306737886@voicesprofessionallearning
-DTSTAMP:20260805T132902Z
+DTSTAMP:20260806T125020Z
 DTSTART:20260731T160000Z
 DTEND:20260731T180000Z
 SUMMARY:MTSS: Tiered Supports
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12306718895@voicesprofessionallearning
-DTSTAMP:20260805T132902Z
+DTSTAMP:20260806T125020Z
 DTSTART:20260730T153000Z
 DTEND:20260730T193000Z
 SUMMARY:Ensemble Comprehensible Input/Output
@@ -23,7 +23,7 @@ DESCRIPTION:In this professional development session\, educators will learn how 
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12306798574@voicesprofessionallearning
-DTSTAMP:20260805T132902Z
+DTSTAMP:20260806T125020Z
 DTSTART:20260803T160000Z
 DTEND:20260803T190000Z
 SUMMARY:TK-3rd Grade Alignment
@@ -32,7 +32,7 @@ DESCRIPTION:ONLY FOR TK-3rd: The session will focus on the California Preschool 
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12306856037@voicesprofessionallearning
-DTSTAMP:20260805T132902Z
+DTSTAMP:20260806T125020Z
 DTSTART:20260803T201500Z
 DTEND:20260803T231500Z
 SUMMARY:For MH\, MP\, FMSD Staff: K-8 Avanza + Boost
@@ -41,7 +41,7 @@ DESCRIPTION:In this in-person session\, educators will get hands-on training wit
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12306659628@voicesprofessionallearning
-DTSTAMP:20260805T132902Z
+DTSTAMP:20260806T125020Z
 DTSTART:20260728T160000Z
 DTEND:20260728T223000Z
 SUMMARY:Character-Based Behavior System
@@ -50,7 +50,7 @@ DESCRIPTION:Roxanna – Work with leadership to set them up to deliver training 
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12317544479@voicesprofessionallearning
-DTSTAMP:20260805T132902Z
+DTSTAMP:20260806T125020Z
 DTSTART:20260909T204500Z
 DTEND:20260909T220000Z
 SUMMARY:Gen ed supporting different learners
@@ -59,7 +59,7 @@ DESCRIPTION:Supporting general education teachers to support different learners\
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12321391103@voicesprofessionallearning
-DTSTAMP:20260805T132902Z
+DTSTAMP:20260806T125020Z
 DTSTART:20260812T204500Z
 DTEND:20260812T220000Z
 SUMMARY:WCC:GenEd supporting students with IEPs
@@ -68,7 +68,7 @@ DESCRIPTION:School site discretion
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12321950386@voicesprofessionallearning
-DTSTAMP:20260805T132902Z
+DTSTAMP:20260806T125020Z
 DTSTART:20260819T204500Z
 DTEND:20260819T220000Z
 SUMMARY:Gen Ed supporting different learners
@@ -77,7 +77,7 @@ DESCRIPTION:How general education teachers can support students with different l
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12321911092@voicesprofessionallearning
-DTSTAMP:20260805T132902Z
+DTSTAMP:20260806T125020Z
 DTSTART:20260826T204500Z
 DTEND:20260826T220000Z
 SUMMARY:Gen Ed supporting different learners
@@ -86,7 +86,7 @@ DESCRIPTION:How general education teachers can support different learning styles
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12322024774@voicesprofessionallearning
-DTSTAMP:20260805T132902Z
+DTSTAMP:20260806T125020Z
 DTSTART:20260902T204500Z
 DTEND:20260902T220000Z
 SUMMARY:Gen Ed supporting different learners
@@ -95,34 +95,34 @@ DESCRIPTION:How to support general education teachers with supporting different 
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12414659903@voicesprofessionallearning
-DTSTAMP:20260805T132902Z
+DTSTAMP:20260806T125020Z
 DTSTART:20260723T163000Z
 DTEND:20260723T190000Z
 SUMMARY:Ensemble Leader PD
 LOCATION:715 Hellyer Avenue\, San Jose\, CA\, USA
-DESCRIPTION:https://us02web.zoom.us/j/83463420633?pwd=yK7I9Is6OtDFWxONdE2r48SvLegpFj.1
+DESCRIPTION:https://us02web.zoom.us/j/83463420633
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12414657693@voicesprofessionallearning
-DTSTAMP:20260805T132902Z
+DTSTAMP:20260806T125020Z
 DTSTART:20260723T200000Z
 DTEND:20260723T213000Z
 SUMMARY:Ensemble Leader PD Continued
 LOCATION:715 Hellyer Avenue\, San Jose\, CA\, USA
-DESCRIPTION:https://us02web.zoom.us/j/83463420633?pwd=yK7I9Is6OtDFWxONdE2r48SvLegpFj.1
+DESCRIPTION:https://us02web.zoom.us/j/83463420633
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12666778491@voicesprofessionallearning
-DTSTAMP:20260805T132902Z
+DTSTAMP:20260806T125020Z
 DTSTART:20260805T153000Z
 DTEND:20260805T163000Z
 SUMMARY:VMS Teachers Only: ELA/SLA Intro & Logic
 LOCATION:California\, USA
-DESCRIPTION:In this virtual session\, understand how the scope and sequences for language work in VMS.  Understand the opportunities and logic behind the guidelines and possible section projects.  Link: https://voicescharterschool.zoom.us/j/83558959840
+DESCRIPTION:In this virtual session\, understand how the scope and sequences for language work in VMS. Link: https://voicescharterschool.zoom.us/j/83558959840
 END:VEVENT
 BEGIN:VEVENT
 UID:pl-12678756355@voicesprofessionallearning
-DTSTAMP:20260805T132902Z
+DTSTAMP:20260806T125020Z
 DTSTART:20260731T144500Z
 DTEND:20260731T231500Z
 SUMMARY:WCC Prep & Plan
